@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:13
+    container_name: my_postgres_container
+    environment:
+      POSTGRES_USER: forever
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: hots_draft
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - my_network
+
+volumes:
+  postgres_data:
+
+networks:
+  my_network:
+    driver: bridge
