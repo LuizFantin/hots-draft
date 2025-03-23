@@ -1,4 +1,3 @@
-// src/app/api/draft/update/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import { query } from '@/lib/db';
 import { getNextPhase } from '@/lib/draftLogic';

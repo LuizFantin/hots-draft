@@ -1,4 +1,3 @@
-// src/app/api/draft/heroes/route.ts
 import { NextResponse } from 'next/server';
 import { fetchHeroes } from '@/lib/heroesApi';
 

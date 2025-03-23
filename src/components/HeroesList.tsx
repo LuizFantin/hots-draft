@@ -1,4 +1,3 @@
-// src/components/HeroesList.tsx
 import { useState } from 'react';
 import { Hero } from '@/lib/types';
 import Image from 'next/image';

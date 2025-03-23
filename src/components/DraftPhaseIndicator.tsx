@@ -1,4 +1,3 @@
-// src/components/DraftPhaseIndicator.tsx
 import { DraftPhase } from '@/lib/types';
 
 interface DraftPhaseIndicatorProps {

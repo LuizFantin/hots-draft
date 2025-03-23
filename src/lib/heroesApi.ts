@@ -1,4 +1,3 @@
-// src/lib/heroesApi.ts
 import { Hero } from './types';
 
 // Cache para armazenar os heróis

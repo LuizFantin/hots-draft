@@ -1,4 +1,3 @@
-// src/lib/draftLogic.ts
 import { DraftPhase, Draft } from './types';
 
 // Define a sequência das fases do draft com 3 bans
