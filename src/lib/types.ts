@@ -22,7 +22,7 @@ export interface Hero {
     'ban5_team1' | 'ban5_team2' | 
     'pick3_team2' | 'pick4_team2' | 
     'pick3_team1' | 'pick4_team1' | 
-    'pick5_team2' |
+    'pick5_team2' | 'pick5_team1' |
     'completed';
   
   export interface Draft {

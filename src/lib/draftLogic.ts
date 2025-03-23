@@ -6,13 +6,12 @@ const draftSequence3Bans: DraftPhase[] = [
   'setup',
   'ban1_team1', 'ban1_team2',
   'ban2_team1', 'ban2_team2',
-  'ban3_team1', 'ban3_team2',
   'pick1_team1',
   'pick1_team2', 'pick2_team2',
-  'pick2_team1',
-  'ban5_team1', 'ban5_team2',
+  'pick2_team1','pick3_team1',
+  'ban3_team1', 'ban3_team2',
   'pick3_team2', 'pick4_team2',
-  'pick3_team1', 'pick4_team1',
+  'pick4_team1', 'pick5_team1',
   'pick5_team2',
   'completed'
 ];
@@ -23,13 +22,12 @@ const draftSequence4Bans: DraftPhase[] = [
   'ban1_team1', 'ban1_team2',
   'ban2_team1', 'ban2_team2',
   'ban3_team1', 'ban3_team2',
-  'ban4_team1', 'ban4_team2',
   'pick1_team1',
   'pick1_team2', 'pick2_team2',
-  'pick2_team1',
-  'ban5_team1', 'ban5_team2',
+  'pick2_team1', 'pick3_team1',
+  'ban4_team1', 'ban4_team2',
   'pick3_team2', 'pick4_team2',
-  'pick3_team1', 'pick4_team1',
+  'pick4_team1', 'pick5_team1',
   'pick5_team2',
   'completed'
 ];
