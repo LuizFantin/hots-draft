@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HotS Draft System
 
-## Getting Started
+## Visão Geral
 
-First, run the development server:
+Este sistema de draft para Heroes of the Storm permite que capitães realizem um processo organizado de escolha e banimento de heróis sem necessidade de autenticação. Desenvolvido com Next.js, o sistema oferece uma interface intuitiva para criar e participar de drafts competitivos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Criação de Sala**: Qualquer jogador pode criar uma nova sala de draft
+- **Configuração Flexível**: Opção de escolher entre 3 ou 4 banimentos por time
+- **Compartilhamento Simples**: Link direto para convidar o capitão adversário
+- **Interface Intuitiva**: Seleção visual de heróis através de ícones organizados
+- **Processo Completo**: Suporte ao fluxo padrão de banimentos e escolhas competitivas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Como Usar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Para o Primeiro Capitão
 
-## Learn More
+1. Acesse o sistema e clique em "Iniciar Novo Draft"
+2. Configure a quantidade de banimentos (3 ou 4 por padrão)
+3. Insira seu nome na caixa de identificação
+4. Compartilhe o link gerado com o capitão adversário
+5. Aguarde a entrada do segundo capitão
+6. Clique em "INICIAR O DRAFT AGORA" quando estiver pronto
 
-To learn more about Next.js, take a look at the following resources:
+### Para o Segundo Capitão
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Acesse o link compartilhado pelo primeiro capitão
+2. Insira seu nome na caixa de identificação
+3. Aguarde o início do draft pelo primeiro capitão
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Fluxo do Draft
 
-## Deploy on Vercel
+### Com 3 Banimentos por Time
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Fase de Banimento 1**: 1 ban para cada time
+2. **Fase de Banimento 2**: 1 ban para cada time
+3. **Fase de Banimento 3**: 1 ban para cada time
+4. **Fase de Escol
