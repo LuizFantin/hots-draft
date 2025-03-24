@@ -4,6 +4,8 @@
 
 Este sistema de draft para Heroes of the Storm permite que capitães realizem um processo organizado de escolha e banimento de heróis sem necessidade de autenticação. Desenvolvido com Next.js, o sistema oferece uma interface intuitiva para criar e participar de drafts competitivos.
 
+![image](https://github.com/user-attachments/assets/48fb9abb-3262-4dc0-847c-4684c1e02bd5)
+
 ## Funcionalidades
 
 - **Criação de Sala**: Qualquer jogador pode criar uma nova sala de draft
