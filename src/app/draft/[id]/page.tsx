@@ -49,7 +49,7 @@ export default function DraftPage() {
     fetchDraftData();
     
     // Configurar polling para atualizações
-    const intervalId = setInterval(fetchDraftData, 3000);
+    const intervalId = setInterval(fetchDraftData, 1000);
     
     return () => clearInterval(intervalId);
   }, [draftId]);
@@ -282,7 +282,7 @@ export default function DraftPage() {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
           <div className="lg:col-span-2 bg-gray-800 rounded-lg shadow-lg p-4">
             <DraftPhaseIndicator 
               phase={draft.current_phase} 

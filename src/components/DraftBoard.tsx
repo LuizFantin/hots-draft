@@ -68,7 +68,7 @@ export default function DraftBoard({ draft, heroes, team1Name, team2Name }: Draf
     return (
       <div 
         key={`pick-${index}`}
-        className={`h-20 rounded-md flex items-center justify-center ${
+        className={`h-full w-full rounded-md flex items-center justify-center ${
           hero ? 'bg-gray-700' : 'bg-gray-700 bg-opacity-30 border border-dashed border-gray-600'
         }`}
       >
@@ -77,9 +77,10 @@ export default function DraftBoard({ draft, heroes, team1Name, team2Name }: Draf
             <Image 
               src={hero.icon}
               alt={hero.name} 
-              width={40}
-              height={40}
-              className="h-12 w-12 object-cover rounded-md"
+              width={70}
+              height={70}
+              quality={100}
+              className="h-full w-full object-cover rounded-md"
             />
             <span className="text-xs mt-1 truncate w-full text-center">{hero.name}</span>
           </div>
@@ -95,23 +96,24 @@ export default function DraftBoard({ draft, heroes, team1Name, team2Name }: Draf
     return (
       <div 
         key={`ban-${index}`}
-        className={`h-16 w-16 rounded-md flex items-center justify-center relative ${
+        className={`h-20 w-20 rounded-md flex items-center justify-center relative ${
           hero ? 'bg-gray-700' : 'bg-gray-700 bg-opacity-30 border border-dashed border-gray-600'
         }`}
       >
         {hero ? (
-          <div className="relative">
+          <div className="aspect-square relative">
             <Image 
               src={hero.icon}
               alt={hero.name} 
-              width={40}
-              height={40}
-              className="h-12 w-12 object-cover rounded-md opacity-50"
+              width={70}
+              height={70}
+              quality={100}
+              className="h-full w-full object-cover rounded-md opacity-50"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
+            {/* <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-full h-0.5 bg-red-500 transform rotate-45"></div>
               <div className="w-full h-0.5 bg-red-500 transform -rotate-45"></div>
-            </div>
+            </div> */}
             <div className="absolute bottom-0 left-0 right-0 text-xs text-center truncate bg-black bg-opacity-50 rounded-b-md">
               {hero.name}
             </div>

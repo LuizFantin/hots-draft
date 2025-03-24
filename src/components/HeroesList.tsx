@@ -66,7 +66,7 @@ export default function HeroesList({
         </div>
       </div>
       
-      <div className="h-96 overflow-y-auto pr-2 grid grid-cols-6 gap-2">
+      <div className="h-96 overflow-y-auto pr-2 grid grid-cols-10 gap-2">
         {filteredHeroes.map(hero => {
           const isAlreadySelected = isSelected(hero.id);
           
@@ -88,8 +88,9 @@ export default function HeroesList({
                 <Image 
                   src={hero.icon}
                   alt={hero.name} 
-                  width={40}
-                  height={40}
+                  quality={100}
+                  priority
+                  fill
                   className="w-full h-full object-cover rounded-md"
                 />
                 

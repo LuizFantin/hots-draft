@@ -27,8 +27,8 @@ export async function fetchHeroes(): Promise<Hero[]> {
         role: hero.role,
         new_role: hero.new_role,
         short_name: hero.short_name,
-        icon: `/heroes_icons/${hero.short_name}.webp` // URL dos ícones
-        // icon: `/heroes_icons/artanis.webp` // URL dos ícones
+        icon: `/heroes_icons_quality/${hero.short_name}.png` // URL dos ícones
+        // icon: `/heroes_icons/${hero.short_name}.webp` // URL dos ícones
       };
     });
     
