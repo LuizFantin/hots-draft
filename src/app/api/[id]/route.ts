@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { query } from '@/lib/db';
 
 interface RouteParams {
-  params: {
+  params: Promise<{
     id: string;
-  }
+  }>
 }
 
 export async function GET(request: NextRequest, { params }: RouteParams) {
