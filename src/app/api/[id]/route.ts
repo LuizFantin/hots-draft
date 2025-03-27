@@ -18,11 +18,12 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       );
     }
     
-    // Buscar o draft e seus picks e bans
+    // Buscar o draft e seus picks, bans e map_bans
     const result = await query(
       `SELECT d.*, 
         (SELECT json_agg(p.*) FROM picks p WHERE p.draft_id = d.id) as picks,
-        (SELECT json_agg(b.*) FROM bans b WHERE b.draft_id = d.id) as bans
+        (SELECT json_agg(b.*) FROM bans b WHERE b.draft_id = d.id) as bans,
+        (SELECT json_agg(mb.*) FROM map_bans mb WHERE mb.draft_id = d.id) as map_bans
       FROM drafts d
       WHERE d.id = $1`,
       [draftId]

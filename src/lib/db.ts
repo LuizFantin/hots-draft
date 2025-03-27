@@ -22,12 +22,14 @@ export async function initializeDatabase() {
       captain1_name TEXT NOT NULL,
       captain2_name TEXT,
       ban_count INTEGER NOT NULL DEFAULT 3,
+      first_pick_team INTEGER NOT NULL DEFAULT 1,
+      selected_map TEXT,
       status TEXT NOT NULL DEFAULT 'waiting',
       current_phase TEXT NOT NULL DEFAULT 'setup',
       created_at TIMESTAMP NOT NULL DEFAULT NOW(),
       updated_at TIMESTAMP NOT NULL DEFAULT NOW()
     );
-    
+
     CREATE TABLE IF NOT EXISTS picks (
       id SERIAL PRIMARY KEY,
       draft_id INTEGER REFERENCES drafts(id) ON DELETE CASCADE,
@@ -42,6 +44,15 @@ export async function initializeDatabase() {
       draft_id INTEGER REFERENCES drafts(id) ON DELETE CASCADE,
       team INTEGER NOT NULL,
       hero_id TEXT NOT NULL,
+      ban_order INTEGER NOT NULL,
+      created_at TIMESTAMP NOT NULL DEFAULT NOW()
+    );
+
+    CREATE TABLE IF NOT EXISTS map_bans (
+      id SERIAL PRIMARY KEY,
+      draft_id INTEGER REFERENCES drafts(id) ON DELETE CASCADE,
+      team INTEGER NOT NULL,
+      map_id TEXT NOT NULL,
       ban_order INTEGER NOT NULL,
       created_at TIMESTAMP NOT NULL DEFAULT NOW()
     );
