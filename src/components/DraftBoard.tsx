@@ -44,6 +44,7 @@ export default function DraftBoard({ draft, heroes, team1Name, team2Name }: Draf
       const team1 = [];
       const team2 = [];
       
+      console.log("BANS DO DRAFT",draft.bans)
       for (const ban of draft.bans) {
         const hero = heroes.find(h => h.id === ban.hero_id);
         if (hero) {
@@ -57,6 +58,10 @@ export default function DraftBoard({ draft, heroes, team1Name, team2Name }: Draf
       
       setTeam1Bans(team1);
       setTeam2Bans(team2);
+
+      // console.log("BANS DO T1", team1);
+      // console.log("BANS DO T2",team2);
+
     };
     
     processPicks();

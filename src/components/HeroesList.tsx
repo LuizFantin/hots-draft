@@ -8,7 +8,7 @@ interface HeroesListProps {
   onSelect: (heroId: string) => void;
   isSelectable: boolean;
   isSelected: (heroId: string) => boolean;
-  currentPhase: 'ban' | 'pick' | 'setup' | 'completed';
+  currentPhase: 'map_ban' | 'map_pick' | 'setup' | 'completed' | 'ban' | 'pick';
 }
 
 export default function HeroesList({ 

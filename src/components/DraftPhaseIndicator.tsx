@@ -15,9 +15,9 @@ export default function DraftPhaseIndicator({
   
   if (phase === 'completed') {
     backgroundColor = 'bg-green-700';
-  } else if (phase.startsWith('ban')) {
+  } else if (phase.startsWith('ban') || phase.startsWith('map_ban')) {
     backgroundColor = 'bg-red-700';
-  } else if (phase.startsWith('pick')) {
+  } else if (phase.startsWith('pick') || phase === 'map_pick') {
     backgroundColor = 'bg-blue-700';
   }
   
@@ -27,7 +27,9 @@ export default function DraftPhaseIndicator({
         <h2 className="text-lg font-semibold">{description}</h2>
         {phase !== 'setup' && phase !== 'completed' && (
           <p className="text-sm opacity-80">
-            {phase.startsWith('ban') ? 'Fase de Banimento' : 'Fase de Escolha'}
+            {phase.startsWith('ban') || phase.startsWith('map_ban') 
+              ? 'Fase de Banimento' 
+              : 'Fase de Escolha'}
           </p>
         )}
       </div>
